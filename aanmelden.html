@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/webp" sizes="192x192" href="img/Home/cropped-stichting-ilmi-192x192.webp" />
+  <link rel="apple-touch-icon" href="img/Home/cropped-stichting-ilmi-192x192.webp" />
+  <title>Aanmelden voor Activiteiten - Stichting Ilmi</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .main_registration {
+      background: linear-gradient(rgba(48, 58, 77, 0.8), rgba(48, 58, 77, 0.8)),
+                  url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1470&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .main_registration .main__title,
+    .main_registration .main__text {
+      color: #ffffff;
+    }
+
+    .registration {
+      padding: 4rem 0;
+      background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    }
+
+    .registration__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .registration__form {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .form__group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .form__label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #303a4d;
+      font-size: 0.95rem;
+    }
+
+    .form__input,
+    .form__textarea,
+    .form__select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #ffffff;
+    }
+
+    .form__input:focus,
+    .form__textarea:focus,
+    .form__select:focus {
+      outline: none;
+      border-color: #303a4d;
+      box-shadow: 0 0 0 3px rgba(48, 58, 77, 0.1);
+    }
+
+    .form__input:hover,
+    .form__textarea:hover,
+    .form__select:hover {
+      border-color: #303a4d;
+    }
+
+    .form__textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .form__submit {
+      background: #303a4d;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    .form__submit:hover {
+      background: #404c64;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(48, 58, 77, 0.15);
+    }
+
+    .registration__info {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .registration__title {
+      font-size: 2rem;
+      color: #303a4d;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .registration__text {
+      color: #6c757d;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .form__hint {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-top: 0.25rem;
+    }
+
+    .form__required {
+      color: #dc3545;
+      margin-left: 0.25rem;
+    }
+
+    .form__checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .form__checkbox {
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .form__checkbox-label {
+      font-size: 0.95rem;
+      color: #6c757d;
+      line-height: 1.4;
+    }
+
+    .registration__benefits {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #303a4d;
+      border-radius: 0.5rem;
+      border: none;
+      color: #ffffff;
+    }
+
+    .benefits__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .benefits__list li {
+      padding-left: 1.5rem;
+      position: relative;
+      color: #ffffff;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .benefits__list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .registration__contact-info {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .registration__contact-info p {
+      margin: 0 0 1rem 0;
+      color: #303a4d;
+      font-weight: 600;
+    }
+
+    .registration__contact-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .registration__contact-info li {
+      margin-bottom: 0.5rem;
+      color: #6c757d;
+    }
+
+    .registration__contact-info li:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .form__grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .registration__form {
+        padding: 1.5rem;
+      }
+
+      .registration__title {
+        font-size: 1.75rem;
+      }
+
+      .registration__benefits {
+        padding: 1rem;
+      }
+
+      .registration__contact-info {
+        padding: 1rem;
+      }
+
+      .benefits__list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">
+          <img src="img/Home/stichting-ilmi-150x150.webp" alt="Stichting Ilmi Logo" width="150" height="150">
+        </a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="about.html" class="menu__link">Over Ons</a></li>
+                <li class="menu__item"><a href="services.html" class="menu__link">Diensten</a></li>
+                <li class="menu__item"><a href="bestuur.html" class="menu__link">Bestuur</a></li>
+                <li class="menu__item"><a href="doneren.html" class="menu__link">Doneren</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+              </ul>
+              <a href="contact.html" class="actions-header__button">Word Vrijwilliger</a>
+            </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_registration main_pages">
+        <div class="main__container main__container_pages">
+          <h1 class="main__title">Aanmelden voor Activiteiten</h1>
+          <div class="main__text main__text_pages">
+            Schrijf uw kind in voor huiswerkbegeleiding, CITO-training of andere educatieve activiteiten
+          </div>
+        </div>
+      </section>
+
+      <section class="page__registration registration">
+        <div class="registration__container">
+          <div class="registration__info">
+            <h2 class="registration__title">Inschrijfformulier voor Leerlingen</h2>
+            <p class="registration__text">
+              Wilt u uw kind aanmelden voor onze educatieve activiteiten? Vul het onderstaande formulier in en wij nemen binnen 2 werkdagen contact met u op om de mogelijkheden te bespreken.
+            </p>
+            <div class="registration__benefits">
+              <ul class="benefits__list">
+                <li>Professionele begeleiding op maat</li>
+                <li>Kleine groepen voor persoonlijke aandacht</li>
+                <li>Flexibele tijden na schooltijd en in het weekend</li>
+                <li>Ervaren docenten en mentoren</li>
+              </ul>
+            </div>
+          </div>
+          
+          <form class="registration__form" action="#" method="POST">
+            <div class="form__grid">
+              <div class="form__group">
+                <label class="form__label" for="ouder_naam">Naam ouder/verzorger<span class="form__required">*</span></label>
+                <input class="form__input" type="text" id="ouder_naam" name="ouder_naam" placeholder="Uw volledige naam" required>
+              </div>
+              
+              <div class="form__group">
+                <label class="form__label" for="kind_naam">Naam kind<span class="form__required">*</span></label>
+                <input class="form__input" type="text" id="kind_naam" name="kind_naam" placeholder="Naam van uw kind" required>
+              </div>
+            </div>
+
+            <div class="form__grid">
+              <div class="form__group">
+                <label class="form__label" for="email">E-mailadres<span class="form__required">*</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="uw.email@voorbeeld.nl" required>
+                <p class="form__hint">We gebruiken dit om contact met u op te nemen</p>
+              </div>
+              
+              <div class="form__group">
+                <label class="form__label" for="telefoon">Telefoonnummer<span class="form__required">*</span></label>
+                <input class="form__input" type="tel" id="telefoon" name="telefoon" placeholder="06-12345678" pattern="[0-9\+\-\s]+" required>
+                <p class="form__hint">Voor belangrijke mededelingen en noodgevallen</p>
+              </div>
+            </div>
+
+            <div class="form__grid">
+              <div class="form__group">
+                <label class="form__label" for="activiteit">Gewenste activiteit<span class="form__required">*</span></label>
+                <select class="form__input form__select" id="activiteit" name="activiteit" required>
+                  <option value="">Selecteer een optie</option>
+                  <option value="huiswerkbegeleiding">Huiswerkbegeleiding</option>
+                  <option value="cito">CITO Training</option>
+                  <option value="mentorschap">Mentorschap</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="leerjaar">Leerjaar/Niveau<span class="form__required">*</span></label>
+                <select class="form__input form__select" id="leerjaar" name="leerjaar" required>
+                  <option value="">Selecteer een optie</option>
+                  <option value="groep3">Groep 3</option>
+                  <option value="groep4">Groep 4</option>
+                  <option value="groep5">Groep 5</option>
+                  <option value="groep6">Groep 6</option>
+                  <option value="groep7">Groep 7</option>
+                  <option value="groep8">Groep 8</option>
+                  <option value="middelbare_school">Middelbare School</option>
+                  <option value="mbo">MBO</option>
+                  <option value="hbo">HBO</option>
+                  <option value="universiteit">Universiteit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__grid">
+              <div class="form__group">
+                <label class="form__label" for="vakken">Specifieke vakken</label>
+                <input class="form__input" type="text" id="vakken" name="vakken" placeholder="Bijv: Wiskunde, Nederlands, Engels">
+                <p class="form__hint">Bij welke vakken heeft uw kind extra ondersteuning nodig?</p>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="voorkeur_dagen">Voorkeur dagen/tijden</label>
+                <input class="form__input" type="text" id="voorkeur_dagen" name="voorkeur_dagen" placeholder="Bijv: Maandag na school, Zaterdag ochtend">
+                <p class="form__hint">Wanneer zou uw kind het liefst willen deelnemen?</p>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="opmerkingen">Aanvullende informatie</label>
+              <textarea class="form__textarea" id="opmerkingen" name="opmerkingen" 
+                placeholder="Zijn er nog belangrijke zaken die we moeten weten? Bijvoorbeeld over leerstijl, specifieke uitdagingen of andere relevante informatie."></textarea>
+              <p class="form__hint">Help ons uw kind zo goed mogelijk te ondersteunen</p>
+            </div>
+
+            <div class="form__checkbox-group">
+              <input type="checkbox" id="privacy" name="privacy" class="form__checkbox" required>
+              <label for="privacy" class="form__checkbox-label">
+                Ik ga akkoord met de verwerking van onze gegevens volgens de privacyverklaring van Stichting Ilmi<span class="form__required">*</span>
+              </label>
+            </div>
+
+            <div class="form__checkbox-group">
+              <input type="checkbox" id="updates" name="updates" class="form__checkbox">
+              <label for="updates" class="form__checkbox-label">
+                Ik wil graag op de hoogte blijven van nieuws en activiteiten van Stichting Ilmi
+              </label>
+            </div>
+
+            <button type="submit" class="form__submit">Aanmelding Versturen</button>
+          </form>
+
+          <div class="registration__contact-info">
+            <p>Heeft u vragen over het aanmelden? Neem contact met ons op:</p>
+            <ul>
+              <li><strong>Telefoon:</strong> 020-7301336</li>
+              <li><strong>E-mail:</strong> info@stichtingilmi.nl</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__column">
+          <h3 class="footer__title">Contact</h3>
+          <ul class="footer__contact">
+            <li><strong>Telefoon:</strong> 020-7301336</li>
+            <li><strong>Adres:</strong> Ooievaarplein 13, 1223PD Hilversum</li>
+            <li><strong>E-mail:</strong> info@stichtingilmi.nl</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Over Ons</h3>
+          <ul class="footer__links">
+            <li><a href="about.html">Over Stichting Ilmi</a></li>
+            <li><a href="bestuur.html">Ons Bestuur</a></li>
+            <li><a href="doneren.html">Steun Ons</a></li>
+            <li><a href="contact.html">Word Vrijwilliger</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Algemene Informatie</h3>
+          <ul class="footer__info">
+            <li><strong>KvK-nummer:</strong> 95389164</li>
+            <li><strong>RSIN:</strong> 867111616</li>
+            <li><strong>Bank:</strong> NL89 INGB 0009 9191 42</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__container">
+          <a href="bestuur.html" class="footer__anbi">
+            <img src="img/5944-anbi-algemeen-nut-beogende-instelling.png" alt="ANBI Status">
+          </a>
+          <p class="footer__copyright">© 2024 Stichting Ilmi - Alle rechten voorbehouden</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html> 
