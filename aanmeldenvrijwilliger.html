@@ -299,13 +299,27 @@
             <div class="form__grid">
               <div class="form__group">
                 <label class="form__label" for="voornaam" id="voornaam-label">Voornaam<span class="form__required" aria-hidden="true">*</span></label>
-                <input class="form__input" type="text" id="voornaam" name="voornaam" placeholder="Uw voornaam" required aria-required="true" aria-labelledby="voornaam-label" aria-describedby="voornaam-error">
+                <input class="form__input" type="text" id="voornaam" name="voornaam" 
+                  inputmode="text" 
+                  autocomplete="given-name"
+                  placeholder="Uw voornaam" 
+                  required 
+                  aria-required="true" 
+                  aria-labelledby="voornaam-label" 
+                  aria-describedby="voornaam-error">
                 <div id="voornaam-error" class="form__error" role="alert" aria-live="polite"></div>
               </div>
               
               <div class="form__group">
                 <label class="form__label" for="achternaam" id="achternaam-label">Achternaam<span class="form__required" aria-hidden="true">*</span></label>
-                <input class="form__input" type="text" id="achternaam" name="achternaam" placeholder="Uw achternaam" required aria-required="true" aria-labelledby="achternaam-label" aria-describedby="achternaam-error">
+                <input class="form__input" type="text" id="achternaam" name="achternaam" 
+                  inputmode="text"
+                  autocomplete="family-name"
+                  placeholder="Uw achternaam" 
+                  required 
+                  aria-required="true" 
+                  aria-labelledby="achternaam-label" 
+                  aria-describedby="achternaam-error">
                 <div id="achternaam-error" class="form__error" role="alert" aria-live="polite"></div>
               </div>
             </div>
@@ -313,13 +327,22 @@
             <div class="form__grid">
               <div class="form__group">
                 <label class="form__label" for="email">E-mailadres<span class="form__required">*</span></label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="uw.email@voorbeeld.nl" required>
+                <input class="form__input" type="email" id="email" name="email" 
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="uw.email@voorbeeld.nl" 
+                  required>
                 <p class="form__hint">We gebruiken dit om contact met je op te nemen</p>
               </div>
               
               <div class="form__group">
                 <label class="form__label" for="telefoon">Telefoonnummer<span class="form__required">*</span></label>
-                <input class="form__input" type="tel" id="telefoon" name="telefoon" placeholder="06-12345678" pattern="[0-9\+\-\s]+" required>
+                <input class="form__input" type="tel" id="telefoon" name="telefoon" 
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="06-12345678" 
+                  pattern="[0-9\+\-\s]+" 
+                  required>
                 <p class="form__hint">We gebruiken dit alleen indien nodig</p>
               </div>
             </div>
